@@ -16,8 +16,6 @@
     align-items: center;
     justify-content: center;
     z-index: 99999 !important;
-    /* Adiciona flex para centralizar */
-    display: flex;
 }
 #modal-hoteis > div {
     background: var(--branco);
@@ -276,14 +274,7 @@
         box-shadow: none !important;
     }
 }
-        /* Adicione no seu <style> */
-#modal-hoteis {
-    z-index: 99999 !important;
-}
-#modal-hoteis > div {
-    z-index: 100000 !important;
-    position: relative;
-}
+
 .map-container,
 .map-container iframe {
     z-index: 1 !important;
@@ -626,6 +617,25 @@
     <h3>Hospedagem</h3>
     <button id="abrir-hoteis" class="btn" style="margin-top: 1rem;">Sugerimos alguns hotéis</button>
 </div>
+     <div class="detail-card">
+                    <i class="fas fa-car"></i>
+                    <h3>Estacionamento</h3>
+                    <p>Estacionamento gratuito disponível no local </p>
+                </div>
+
+                 <div class="detail-card">
+                    <i class="fas fa-taxi"></i>
+                    <h3>Transporte</h3>
+                   <p>
+        <strong>
+            <a href="https://conecta.bio/flashcar" target="_blank" rel="noopener" style="color: var(--terracota); text-decoration: underline;">
+                Flash Car
+            </a>
+        </strong>
+        <br>
+        App de transporte - estará à disposição na saída da festa
+    </p>
+                </div>
 
 <div id="modal-hoteis"> 
 
@@ -674,25 +684,7 @@ document.getElementById('modal-hoteis').onclick = function(e) {
 };
 </script>
                 
-                <div class="detail-card">
-                    <i class="fas fa-car"></i>
-                    <h3>Estacionamento</h3>
-                    <p>Estacionamento gratuito disponível no local </p>
-                </div>
-
-                 <div class="detail-card">
-                    <i class="fas fa-taxi"></i>
-                    <h3>Transporte</h3>
-                   <p>
-        <strong>
-            <a href="https://conecta.bio/flashcar" target="_blank" rel="noopener" style="color: var(--terracota); text-decoration: underline;">
-                Flash Car
-            </a>
-        </strong>
-        <br>
-        App de transporte - estará à disposição na saída da festa
-    </p>
-                </div>
+           
             </div>
             
             <div class="map-container fade-in" style="margin-top: 12rem;">
