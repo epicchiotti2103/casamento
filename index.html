@@ -10,14 +10,13 @@
         #modal-hoteis {
   display: none;
   position: fixed;
-  inset: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   background: rgba(0,0,0,0.5);
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   z-index: 99999 !important;
-  /* Remove display: flex from here, set via JS */
 }
 #modal-hoteis.active {
   display: flex !important;
@@ -31,12 +30,9 @@
   overflow: auto;
   position: relative;
   box-shadow: 0 8px 32px rgba(0,0,0,0.25);
-  margin: 0 auto;
+  margin-top: 10vh;
+  margin-bottom: 2vh;
   z-index: 100000 !important;
-  top: auto;
-  left: auto;
-  right: auto;
-  bottom: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,7 +43,8 @@
     padding: 1rem;
     max-width: 98vw;
     max-height: 90vh;
-    margin: 0 auto;
+    margin-top: 6vh;
+    margin-bottom: 2vh;
   }
 }
         :root {
@@ -688,15 +685,11 @@
 const modalHoteis = document.getElementById('modal-hoteis');
 document.getElementById('abrir-hoteis').onclick = function() {
   modalHoteis.classList.add('active');
-  // Força scroll para o topo da página ao abrir o modal
-  window.scrollTo({ top: 0, behavior: 'smooth' });
 };
-// Fechar modal
 const fecharHoteis = document.getElementById('fechar-hoteis');
 fecharHoteis.onclick = function() {
   modalHoteis.classList.remove('active');
 };
-// Fechar ao clicar fora do conteúdo
 modalHoteis.onclick = function(e) {
   if (e.target === this) this.classList.remove('active');
 };
