@@ -7,6 +7,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <style>
+        #modal-hoteis {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 99999 !important;
+    /* Adiciona flex para centralizar */
+    display: flex;
+}
+#modal-hoteis > div {
+    background: var(--branco);
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 90vw;
+    max-height: 80vh;
+    overflow: auto;
+    position: relative;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    margin: 0;
+    z-index: 100000 !important;
+}
+@media (max-width: 600px) {
+  #modal-hoteis > div {
+    padding: 1rem;
+    max-width: 98vw;
+    max-height: 90vh;
+  }
+}
         :root {
             --cream: #f5f0e6;
             --terracota: #d4a87e;
@@ -596,28 +627,8 @@
     <button id="abrir-hoteis" class="btn" style="margin-top: 1rem;">Sugerimos alguns hotéis</button>
 </div>
 
-<div id="modal-hoteis" style="
-    display: none;
-    position: fixed;
-    top: 0; left: 0;
-    width: 100vw; height: 100vh;
-    background: rgba(0,0,0,0.5);
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center;
-    z-index: 99999 !important;
-">
-  <div style="
-      background: var(--branco);
-      padding: 2rem;
-      border-radius: 15px;
-      max-width: 90vw;
-      max-height: 80vh;
-      overflow: auto;
-      position: relative;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.25);
-      margin: 0; /* Remova o margin-top */
-      z-index: 100000 !important;
-  ">
+<div id="modal-hoteis"> 
+
     <button id="fechar-hoteis" style="position:absolute; top:1rem; right:1rem; background:var(--terracota); color:var(--branco); border:none; border-radius:50%; width:2rem; height:2rem; font-size:1.2rem; cursor:pointer;">&times;</button>
     <h2 style="color:var(--terracota); text-align:center; margin-bottom:1rem;">Hotéis Sugeridos</h2>
     <div style="color:var(--marrom-elegante); font-size:1.1rem;">
