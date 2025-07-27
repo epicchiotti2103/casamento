@@ -602,8 +602,9 @@
     top: 0; left: 0;
     width: 100vw; height: 100vh;
     background: rgba(0,0,0,0.5);
-    align-items: flex-start;
+    align-items: center; /* Centraliza verticalmente */
     justify-content: center;
+    z-index: 99999 !important;
 ">
   <div style="
       background: var(--branco);
@@ -614,7 +615,8 @@
       overflow: auto;
       position: relative;
       box-shadow: 0 8px 32px rgba(0,0,0,0.25);
-      margin: 4rem auto 0 auto;
+      margin: 0; /* Remova o margin-top */
+      z-index: 100000 !important;
   ">
     <button id="fechar-hoteis" style="position:absolute; top:1rem; right:1rem; background:var(--terracota); color:var(--branco); border:none; border-radius:50%; width:2rem; height:2rem; font-size:1.2rem; cursor:pointer;">&times;</button>
     <h2 style="color:var(--terracota); text-align:center; margin-bottom:1rem;">Hotéis Sugeridos</h2>
