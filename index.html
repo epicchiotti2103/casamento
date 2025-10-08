@@ -715,7 +715,7 @@ modalHoteis.onclick = function(e) {
             <h2 class="fade-in">Confirmação de Presença</h2>
             <div class="rsvp-form fade-in">
                 <p style="text-align: center; margin-bottom: 2rem; font-size: 1.1rem;">
-                    Sua presença é muito importante para nós! Por favor, confirme até <strong>10 de Setembro de 2025</strong>.
+                    Sua presença é muito importante para nós! Por favor, confirme até <strong>17 de Agosto de 2025</strong>.
                 </p>
                 
                 <div style="text-align: center;">
@@ -1094,8 +1094,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const successMsg = document.getElementById('copy-success');
     if (copyBtn && pixKeySpan) {
         copyBtn.addEventListener('click', function() {
-            // Remove "Chave PIX:" do texto copiado
-            const pixKey = pixKeySpan.textContent.replace(/^Chave PIX:\s*/i, '').trim();
+            // Copia apenas o código PIX sem o texto "Chave PIX:"
+            const pixKey = "00020101021126580014br.gov.bcb.pix01361817bdab-5585-4a83-9b29-e65fd7fb14085204000053039865802BR5922ELIO SURACI PICCHIOTTI6009SAO PEDRO62070503***63046354";
             navigator.clipboard.writeText(pixKey).then(() => {
                 if (successMsg) {
                     successMsg.style.display = 'inline';
